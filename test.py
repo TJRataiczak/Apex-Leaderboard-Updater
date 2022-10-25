@@ -9,6 +9,8 @@ class Player:
 
 all_players = {}
 
-all_players["TJ Rataiczak"] = Player('TJ Rataiczak', 25)
-all_players["Dylan Ham"] = Player('Dylan Ham', 20)
-all_players["Ryan Hayes"] = Player('Ryan Hayes', 18)
+all_players["TJ Rataiczak"] = ['TJ Rataiczak', 20]
+all_players["Dylan Ham"] = ['Dylan Ham', 20]
+all_players["Ryan Hayes"] = ['Ryan Hayes', 18]
+
+print(all_players['Dylan Ham'][1] + 30)

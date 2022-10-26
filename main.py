@@ -15,6 +15,7 @@ for current_sheet in all_sheets:
             else:
                 all_players[player[0]] = player[1]
 
-print(sorted(all_players.items(), key=lambda x: x[1], reverse=True))
+fixed_list = sorted(all_players.items(), key=lambda x: x[1], reverse=True)
 
-print(len(all_players))
+for player in fixed_list:
+    print(player)

@@ -10,6 +10,7 @@ all_worksheets = gsheet.worksheets()
 
 all_players = {}
 
+
 for worksheet in all_worksheets:
     if worksheet.title == 'Leaderboard':
         print("This is the Leaderboard")
@@ -23,7 +24,5 @@ for worksheet in all_worksheets:
 sorted_points = sorted(all_players.items(), key=lambda x: x[1], reverse=True)
 
 df = pd.DataFrame(sorted_points, columns=['Name', 'Leaderboard Points'])
-
-print(df)
 
 gd.set_with_dataframe(gsheet.sheet1, df)

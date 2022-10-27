@@ -23,6 +23,6 @@ for worksheet in all_worksheets:
 
 sorted_points = sorted(all_players.items(), key=lambda x: x[1], reverse=True)
 
-df = pd.DataFrame(sorted_points, columns=['Name', 'Leaderboard Points'])
+df = pd.DataFrame(sorted_points, index=['Name', 'Leaderboard Points'])
 
 gd.set_with_dataframe(gsheet.sheet1, df)

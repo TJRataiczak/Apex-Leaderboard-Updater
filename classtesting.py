@@ -43,9 +43,19 @@ for worksheet in all_worksheets:
                 all_players[record['Name']].update_qualification(True)
                 ranks_qualified.remove(record['Rank'])
 
+player_names = []
+player_points = []
+player_qualified = []
 
-sorted_players = sorted(all_players.items())
+for person in all_players:
+    player_names.append(all_players[person].name)
+    player_points.append(all_players[person].points)
+    player_qualified.append(all_players[person].qualified)
 
-for person in sorted_players:
-    # print(f"{sorted_players[person].name}: {sorted_players[person].qualified}")
-    print(person)
+df_dict = {'Name': player_names,
+            'Points': player_points,
+            'Qualified': player_qualified}
+
+df = pd.DataFrame(df_dict)
+
+gd.set_with_dataframe(gsheet.sheet1, df.sort_values(by='Points', ascending=False))

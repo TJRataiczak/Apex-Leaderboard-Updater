@@ -1,5 +1,18 @@
+class Player:
+    def __init__(self, name, points):
+        self.name = name
+        self.points = points
+        self.qualified = False
+
+    def add_points(self, more_points):
+        self.points += more_points
+    
+    def update_qualification(self, qual):
+        self.qualified = qual
+
 import gspread
 import gspread_dataframe as gd
+from gspread_formatting import *
 from oauth2client.service_account import ServiceAccountCredentials
 import pandas as pd
 
@@ -15,14 +28,39 @@ for worksheet in all_worksheets:
     if worksheet.title == 'Leaderboard':
         print("This is the Leaderboard")
     else:
+        ranks_qualified = [1,2]
         for record in worksheet.get_all_records():
             if record['Name'] in all_players:
-                all_players[record['Name']] += record['Leaderboard Points']
+                all_players[record['Name']].add_points(record['Leaderboard Points'])
             else:
-                all_players[record['Name']] = record['Leaderboard Points']
+                all_players[record['Name']] = Player(record['Name'], record['Leaderboard Points'])
+            
+            if record['Rank'] in ranks_qualified and all_players[record['Name']].qualified == True:
+                print("Qualified")
+                for i in range(len(ranks_qualified)):
+                    ranks_qualified[i] += 1
+            elif record['Rank'] in ranks_qualified and all_players[record['Name']].qualified == False:
+                print("Added Qualification")
+                all_players[record['Name']].update_qualification(True)
+                ranks_qualified.remove(record['Rank'])
 
-sorted_points = sorted(all_players.items(), key=lambda x: x[1], reverse=True)
+player_names = []
+player_points = []
+player_qualified = []
 
-df = pd.DataFrame(sorted_points, columns=['Name', 'Leaderboard Points'])
+for person in all_players:
+    player_names.append(all_players[person].name)
+    player_points.append(all_players[person].points)
+    player_qualified.append('Yes' if all_players[person].qualified == True else 'No')
 
-gd.set_with_dataframe(gsheet.sheet1, df)
+df_dict = {'Name': player_names,
+            'Points': player_points,
+            'Qualified': player_qualified}
+
+df = pd.DataFrame(df_dict)
+
+gd.set_with_dataframe(gsheet.sheet1, df.sort_values(by='Points', ascending=False))
+
+normal_format = CellFormat(horizontalAlignment='CENTER')
+
+format_cell_range(gsheet.sheet1, 'A:Z', normal_format)

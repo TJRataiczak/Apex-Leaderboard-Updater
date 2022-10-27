@@ -50,7 +50,7 @@ player_qualified = []
 for person in all_players:
     player_names.append(all_players[person].name)
     player_points.append(all_players[person].points)
-    player_qualified.append(all_players[person].qualified)
+    player_qualified.append('Yes' if all_players[person].qualified == True else 'No')
 
 df_dict = {'Name': player_names,
             'Points': player_points,

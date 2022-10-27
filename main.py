@@ -16,6 +16,7 @@ from gspread_formatting import *
 from oauth2client.service_account import ServiceAccountCredentials
 import pandas as pd
 
+NORMAL_FORMAT = CellFormat(horizontalAlignment='CENTER')
 gc = gspread.service_account(filename = 'apex-gaming-leaderboard-6c333513634d.json')
 
 gsheet = gc.open_by_key('10FIaM2SmoGZZIODEm5acRNNmiIrPl4seuyfKIjtDPkQ')
@@ -61,6 +62,4 @@ df = pd.DataFrame(df_dict)
 
 gd.set_with_dataframe(gsheet.sheet1, df.sort_values(by='Points', ascending=False))
 
-normal_format = CellFormat(horizontalAlignment='CENTER')
-
-format_cell_range(gsheet.sheet1, 'A:Z', normal_format)
+format_cell_range(gsheet.sheet1, 'A:C', NORMAL_FORMAT)

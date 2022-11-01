@@ -13,7 +13,6 @@ class Player:
 import gspread
 import gspread_dataframe as gd
 from gspread_formatting import *
-from oauth2client.service_account import ServiceAccountCredentials
 import pandas as pd
 
 NORMAL_FORMAT = CellFormat(horizontalAlignment='CENTER')

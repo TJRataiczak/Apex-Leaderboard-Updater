@@ -26,7 +26,7 @@ all_players = {}
 
 for worksheet in all_worksheets:
     if worksheet.title == 'Leaderboard':
-        print("This is the Leaderboard")
+        print("Skipping Leaderboard Sheet")
     else:
         ranks_qualified = [1,2]
         for record in worksheet.get_all_records():
@@ -36,11 +36,9 @@ for worksheet in all_worksheets:
                 all_players[record['Name']] = Player(record['Name'], record['Leaderboard Points'])
             
             if record['Rank'] in ranks_qualified and all_players[record['Name']].qualified == True:
-                print("Qualified")
                 for i in range(len(ranks_qualified)):
                     ranks_qualified[i] += 1
             elif record['Rank'] in ranks_qualified and all_players[record['Name']].qualified == False:
-                print("Added Qualification")
                 all_players[record['Name']].update_qualification(True)
                 ranks_qualified.remove(record['Rank'])
 

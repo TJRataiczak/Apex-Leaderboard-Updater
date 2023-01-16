@@ -57,9 +57,9 @@ df_dict = {'Name': player_names,
 
 df = pd.DataFrame(df_dict)
 
-gd.set_with_dataframe(gsheet.sheet1, df.sort_values(by='Points', ascending=False))
+gd.set_with_dataframe(gsheet.sheet1, df.sort_values(by='Points', ascending=False), col=2)
 
-format_cell_range(gsheet.sheet1, 'A:C', NORMAL_FORMAT)
+format_cell_range(gsheet.sheet1, 'A:D', NORMAL_FORMAT)
 
 player_names.sort()
 

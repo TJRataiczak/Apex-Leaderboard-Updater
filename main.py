@@ -23,6 +23,8 @@ all_worksheets = gsheet.worksheets()
 
 all_players = {}
 
+all_players['Randy Uebbing'] = Player('Randy Uebbing', 0)
+all_players['Randy Uebbing'].update_qualification(True)
 
 for worksheet in all_worksheets:
     if worksheet.title == 'Leaderboard':

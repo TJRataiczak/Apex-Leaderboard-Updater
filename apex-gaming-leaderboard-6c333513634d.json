@@ -1,12 +1,1 @@
-{
-  "type": "service_account",
-  "project_id": "apex-gaming-leaderboard",
-  "private_key_id": "6c333513634deb2aae7cb1d95af9efb1b9c1bef4",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDFO/gskDwQTPdy\nBkb702TvLbaOYA7/9ZBsn3pEB4aEmagr79tfQM+jIDjOcxMand43935PxoPmSa9Y\n3xLVF5Ni9fPxJDZRjQofEZRlHTxWFj/fpwB5xeT3q5bjGpwkGhYXOVYWEmnu746p\n1Q3qu5VqP0zkogu3AJqZvLCxzVepXP012630zkU2ljku1/B2HqZQOgTKgpgaILq5\nBhoCK8x5vu/GkBCnESlCw1As5UdCTAlH++UfFMv+x9LP4NGjsFtHw35LFXNrVJro\n8Bbcl3FPqnPPD3FbBWe3P8etzc3AbF8/2tvaD/ifkKKTaV+V7cQ5sUdcWmawuFdD\nNYkIsVhjAgMBAAECggEAG1Szj61O/W1E7sKK7JN/DZu2i+UovvRO1paE0U9/pvlJ\n8gizS/BFtZOd+5G7qHkO1Y+Qq8pU9cDpMPX8fJXfQRvW+WfstQFH0UVU3GwgM8ey\ngzH3oWg4Uc+vwXmrAF+zBvXVhYp4rnj4unUBEDF9Q3NRGu+PkwTc54fbrk/HoXq4\nZk7L9HuIP+/vo2P+V3KK3kHCo4TOFp6Nc88PNpsXzCxu8ZzsMLWtuVrZD48wDlCi\nWwBaUxDhAjduEGyh859wXNlTnlqCuhC6wcv1XRCwP87/PZA1Z5w2T7CAcabTXPkS\nkIZ+OuZHavqDYkkka71UdLVjsOUpoMS/hmulffqC/QKBgQDtoCCFKShcSNiNDur/\nY19Nw+EUX4tWUNB+ySOEsQbfTM0CDSGupvoRSWltf5pLnmuY7JcKmy8LaA9dWZHp\n1Y+MnVHy+4KTypj7a5FOG1EU+jVSX0mgX1dAE/QfKkQIWVZmfTgR1linkp/wdBT1\nw+t28nF+iwcTLrPecxI7otoHDQKBgQDUfEjqUga4E+PElW2s1DLtPNmumjLKHIKB\n66ukVk7uWhyW8VHq066OU0liEQFOq9lQ+oezRzbrwf4e10YATvhJJ1vIdlDsNlHr\nKa9CgNxx8N8idrykRB+Iro/4kRbtkFet/FoC9a14OesBZWEM5edKh16rI/rz1fRI\ndr7Eom8BLwKBgBgcmXApnvjOQ3r8uoezk6YWbC5fC4p0pNNYoYwDUokyB9Nfdb19\nH/7FDjeYLRXjO1PHHgRrfriPlI+KWS37B5fjFr+rGbLZafCJF7NvPij8wpBbLuNh\nCT9tRuYqqcCXIBdCOYBF2bUXQbdqb/4IJUpqi22ludAOex3lW0JF4g25AoGBALFR\nLf/sh5Lhdjc8g5OwWPdEyls8bpnfBMGqi0fOhnu9UxJbO4L9NzOqKRjfG/osymMb\nTla7XQeMkaXm+5GSVPunDp7QrWMRSXc3B/w1UMD8wxgdgfqKps4G7jn9yeZhh+m3\nJt5FaodjvcsicMS0rjixkry6f9cvenVmMnghHQUdAoGBAJ7+4KDHyuzYDNT/uDtP\nnL4JBeHBKVc9Y9NlxvjpyDnyBaF7c3Rqzp6Exn/oQ327tVLDYHpdaK1TT2rTrYTd\nS/npNKRaJgaB3ncrOTFMi3KahcBNMVFBR3laKX4WTg4u+L4UdLrXEuV8lxrnaQrN\n/xV7uFGssANDLIp17031uw6S\n-----END PRIVATE KEY-----\n",
-  "client_email": "leaderboard@apex-gaming-leaderboard.iam.gserviceaccount.com",
-  "client_id": "117484230593574312780",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/leaderboard%40apex-gaming-leaderboard.iam.gserviceaccount.com"
-}
+
